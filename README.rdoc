@@ -8,9 +8,9 @@ source feed url and is subsequently returned.
 
 == Requirements
  
-uri
-curb 0.7.10
-nokogiri 1.4.4
+* uri
+* curb => 0.7.10
+* nokogiri => 1.4.4
 
 This project was built and tested against ruby 1.9.2p160 (2011-01-16 revision 30579) [x86_64-darwin10.6.0]
  
