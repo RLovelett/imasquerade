@@ -24,6 +24,8 @@ Jeweler::Tasks.new do |gem|
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   gem.add_runtime_dependency 'curb', '= 0.7.10'
+  gem.add_runtime_dependency 'nokogiri', '= 1.4.4'
+  gem.add_development_dependency 'curb', '= 0.7.10'
   gem.add_development_dependency 'nokogiri', '= 1.4.4'
 end
 Jeweler::RubygemsDotOrgTasks.new
