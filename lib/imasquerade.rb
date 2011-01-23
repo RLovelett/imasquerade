@@ -6,5 +6,5 @@ require 'cgi'
 require 'curb'
 require 'nokogiri'
 
+require 'version'
 require 'imasquerade/extractor'
-require 'imasquerade/version'
