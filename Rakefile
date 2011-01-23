@@ -10,19 +10,21 @@ end
 require 'rake'
 
 require 'jeweler'
+require './lib/version.rb'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "imasquerade"
+  gem.version = Imasquerade::Version::STRING
   gem.homepage = "http://github.com/RLovelett/imasquerade"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{iMasquerade is a Ruby class that takes an iTunes Podcast URL and outputs the XML feed URL.}
+  gem.description = %Q{iMasquerade is a Ruby project that allows for the retrieval of the original XML feed used by iTunes to create a specific podcast feed. As the name suggests, the class works by masquerading as iTunes, thereby retrieving the same XML used internal to iTunes. Once this iTunes XML is retrieved it is parsed for the source feed url and is subsequently returned.}
   gem.email = "ryan@wahvee.com"
   gem.authors = ["Ryan Lovelett"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
-  #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
-  #  gem.add_development_dependency 'rspec', '> 1.2.3'
+  gem.add_runtime_dependency 'curb', '= 0.7.10'
+  gem.add_development_dependency 'nokogiri', '= 1.4.4'
 end
 Jeweler::RubygemsDotOrgTasks.new
 

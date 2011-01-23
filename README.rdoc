@@ -1,8 +1,12 @@
-= imasquerade
+= iMasquerade
 
-Description goes here.
+iMasquerade is a Ruby project that allows for the retrieval of the original XML
+feed used by iTunes to create a specific podcast feed. As the name suggests, the
+class works by masquerading as iTunes, thereby retrieving the same XML used
+internal to iTunes. Once this iTunes XML is retrieved it is parsed for the
+source feed url and is subsequently returned.
 
-== Contributing to imasquerade
+== Contributing to iMasquerade
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
