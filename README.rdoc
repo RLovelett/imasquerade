@@ -6,6 +6,23 @@ class works by masquerading as iTunes, thereby retrieving the same XML used
 internal to iTunes. Once this iTunes XML is retrieved it is parsed for the
 source feed url and is subsequently returned.
 
+== Requirements
+ 
+uri
+curb 0.7.10
+nokogiri 1.4.4
+
+This project was built and tested against ruby 1.9.2p160 (2011-01-16 revision 30579) [x86_64-darwin10.6.0]
+ 
+== Usage
+
+ Imasquerade::Extractor.parse_itunes_uri("http://itunes.apple.com/us/podcast/the-f-u-sports-talk-podcast/id356478903")
+ # returns "http://www.urannonline.com/Collection_Site/The_F_U_Sports_Talk_Podcast/rss.xml"
+ 
+Technically, the parser can take the url in another format (e.g., id=356478903).
+However I do not believe Apple is using this format any longer. Regardless the
+capability is there.
+
 == Contributing to iMasquerade
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
