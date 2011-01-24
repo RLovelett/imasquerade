@@ -26,9 +26,13 @@ module Imasquerade
           return array_of_feeds[0].to_s
         rescue Nokogiri::XML::SyntaxError => e
           puts "Caught exception: #{e}"
-          return ""
+          return nil
         rescue Curl::Err::HostResolutionError => e
           puts "Caught exception: #{e}"
+          return nil
+        rescue Curl::Err::Curl::Err::RecvError => e
+          puts "Caught exception: #{e}"
+          return nil
         end
       end    
   end
