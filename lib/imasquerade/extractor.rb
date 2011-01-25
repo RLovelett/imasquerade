@@ -30,7 +30,7 @@ module Imasquerade
         rescue Curl::Err::HostResolutionError => e
           puts "Caught exception: #{e}"
           return nil
-        rescue Curl::Err::Curl::Err::RecvError => e
+        rescue Curl::Err::RecvError => e
           puts "Caught exception: #{e}"
           return nil
         end
