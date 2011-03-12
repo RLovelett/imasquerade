@@ -23,7 +23,11 @@ module Imasquerade
           end
           reader = Nokogiri::XML(response.body_str)
           array_of_feeds = reader.xpath('//xmlns:key[text()="feedURL"]/following-sibling::xmlns:string[1]/text()')
-          return array_of_feeds[0].to_s
+          siteurl = reader.at_xpath('//*[@draggingName="WEBSITE"]')['url']
+          url_hash = {}
+          url_hash['feedurl'] = array_of_feeds[0].to_s
+          url_hash['siteurl'] = siteurl
+          return url_hash
         rescue Nokogiri::XML::SyntaxError => e
           puts "Caught exception: #{e}"
           return nil
