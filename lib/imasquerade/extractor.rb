@@ -13,21 +13,16 @@ module Imasquerade
         id = uri_path.to_s.delete!("id") || uri_query.to_s.delete!("id=")
         return id
       end
-      
+
       def Extractor.fetch_and_parse_feed_from_apple(id)
-        uri = "http://itunes.apple.com/podcast/id#{id}"
+        uri = "http://itunes.apple.com/WebObjects/DZR.woa/wa/viewPodcast?id=#{id}"
         # In case there is some sort of error
         begin
           response = Curl::Easy.perform(uri) do |curl|
             curl.headers["User-Agent"] = 'iTunes/10.1.1'
           end
           reader = Nokogiri::XML(response.body_str)
-          array_of_feeds = reader.xpath('//xmlns:key[text()="feedURL"]/following-sibling::xmlns:string[1]/text()')
-          siteurl = reader.at_xpath('//*[@draggingName="WEBSITE"]')['url']
-          url_hash = {}
-          url_hash['feedurl'] = array_of_feeds[0].to_s
-          url_hash['siteurl'] = siteurl
-          return url_hash
+          return reader.xpath('//@feed-url[1]')
         rescue Nokogiri::XML::SyntaxError => e
           puts "Caught exception: #{e}"
           return nil
@@ -38,6 +33,6 @@ module Imasquerade
           puts "Caught exception: #{e}"
           return nil
         end
-      end    
+      end
   end
 end
