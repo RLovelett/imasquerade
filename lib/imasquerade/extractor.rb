@@ -50,7 +50,12 @@ module Imasquerade
         reader = Nokogiri::XML(response)
         feed_url = reader.xpath('//@feed-url')
         return feed_url[0].value unless feed_url.count == 0
-        list = Plist::parse_xml(response)
+        response.force_encoding("UTF-8") if response.encoding == Encoding::ASCII_8BIT
+        begin
+          list = Plist::parse_xml(response)
+        rescue RuntimeError => bang
+          list = {}
+        end
         if list.has_key?('action') && list['action']['kind'] == "Goto" then
           response = Extractor.fetch_and_parse_feed_from_apple(list['action']['url'])
           return response
@@ -58,6 +63,7 @@ module Imasquerade
           throw list['dialog']['explanation']
         end
         File.open("#{id}.html", 'w') {|f| f.write(response) }
+        throw "The feed was either empty, or mal-formed."
       end
   end
 end
