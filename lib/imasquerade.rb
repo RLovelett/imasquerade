@@ -4,6 +4,7 @@ $:.unshift(File.dirname(__FILE__)) unless
 require 'uri'
 require 'curb'
 require 'nokogiri'
+require 'plist'
+require 'colorize'
 
-require 'version'
 require 'imasquerade/extractor'

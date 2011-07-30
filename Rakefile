@@ -15,7 +15,6 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "imasquerade"
-  gem.version = Imasquerade::Version::STRING
   gem.homepage = "http://github.com/RLovelett/imasquerade"
   gem.license = "MIT"
   gem.summary = %Q{iMasquerade is a Ruby class that takes an iTunes Podcast URL and outputs the XML feed URL.}

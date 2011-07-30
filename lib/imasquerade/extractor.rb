@@ -2,12 +2,11 @@ module Imasquerade
   class Extractor
     public
       def Extractor.parse_itunes_uri(uri='')
-        id = Extractor.extract_itunes_id(uri)
-        return Extractor.fetch_and_parse_feed_from_apple(id)
+        return Extractor.fetch_and_parse_feed_from_apple(uri)
       end
       def Extractor.debug_output(uri='')
-        id = Extractor.extract_itunes_id(uri)
-        doc = Extractor.get_raw_string(Extractor.uri_orig(id))
+        id = Extractor.itunes_id(uri)
+        doc = Extractor.get_raw_string(uri)
         File.open("#{id}.xml", 'w') {|f| f.write(doc) }
       end
     private
@@ -21,12 +20,9 @@ module Imasquerade
         @@uri_redirect = "http://itunes.apple.com/WebObjects/DZR.woa/wa/viewPodcast?id=#{id}"
       end
 
-      def Extractor.extract_itunes_id(url="")
-        uri = URI.parse(url)
-        uri_path = uri.path.match("id[0-9]+") unless uri.path.nil?
-        uri_query = uri.query.match("id=[0-9]+") unless uri.query.nil?
-        id = uri_path.to_s.delete!("id") || uri_query.to_s.delete!("id=")
-        return id
+      def Extractor.itunes_id(url="")
+        /(?:id=?)([0-9]+)/i =~ url
+        return $1
       end
 
       def Extractor.get_raw_string(uri="")
@@ -37,25 +33,31 @@ module Imasquerade
           end
           return response.body_str
         rescue Nokogiri::XML::SyntaxError => e
-          puts "Caught exception: #{e}"
+          puts "Caught exception: #{e}".colorize(:red)
           return nil
         rescue Curl::Err::HostResolutionError => e
-          puts "Caught exception: #{e}"
+          puts "Caught exception: #{e}".colorize(:red)
           return nil
         rescue Curl::Err::RecvError => e
-          puts "Caught exception: #{e}"
+          puts "Caught exception: #{e}".colorize(:red)
           return nil
         end
       end
 
-      def Extractor.fetch_and_parse_feed_from_apple(id)
-        response = Extractor.get_raw_string(Extractor.uri_orig(id))
+      def Extractor.fetch_and_parse_feed_from_apple(url)
+        id = Extractor.itunes_id(url)
+        response = Extractor.get_raw_string(url)
         reader = Nokogiri::XML(response)
         feed_url = reader.xpath('//@feed-url')
         return feed_url[0].value unless feed_url.count == 0
-        # If we got here stuff went wrong
-        File.open("#{id}.xml", 'w') {|f| f.write(response) }
-        raise "Feed was un-expected"
+        list = Plist::parse_xml(response)
+        if list.has_key?('action') && list['action']['kind'] == "Goto" then
+          response = Extractor.fetch_and_parse_feed_from_apple(list['action']['url'])
+          return response
+        elsif list.has_key?('dialog')
+          throw list['dialog']['explanation']
+        end
+        File.open("#{id}.html", 'w') {|f| f.write(response) }
       end
   end
 end
