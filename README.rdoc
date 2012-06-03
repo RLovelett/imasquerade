@@ -1,4 +1,4 @@
-= iMasquerade
+= iMasquerade {<img src="https://secure.travis-ci.org/RLovelett/imasquerade.png" />}[http://travis-ci.org/RLovelett/imasquerade]
 
 iMasquerade is a Ruby project that allows for the retrieval of the original XML
 feed used by iTunes to create a specific podcast feed. As the name suggests, the
