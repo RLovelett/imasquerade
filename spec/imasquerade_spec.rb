@@ -14,4 +14,15 @@ describe Imasquerade, vcr: {
       expect(response).to eq(expected_response)
     end
   end
+
+  describe 'issue #3' do
+    let(:uri) { 'http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=347207945' }
+    let(:expected_response) { 'http://feeds.feedwrench.com/TeachMeToCodeiPhone.rss' }
+
+    subject(:response) { Imasquerade.parse_itunes_uri(uri) }
+
+    it 'should resolve the podcast in issue #3' do
+      expect(response).to eq(expected_response)
+    end
+  end
 end

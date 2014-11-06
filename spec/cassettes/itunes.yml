@@ -71,4 +71,102 @@ http_interactions:
         & Travel\", \"Podcasts\", \"Society & Culture\", \"Kids & Family\"]}]\n}\n\n\n"
     http_version: 
   recorded_at: Thu, 06 Nov 2014 02:14:02 GMT
+- request:
+    method: get
+    uri: https://itunes.apple.com/lookup?id=347207945
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Apple-Jingle-Correlation-Key:
+      - FTFZ5LOGO6DO2
+      X-Apple-Translated-Wo-Url:
+      - "/WebObjects/MZStoreServices.woa/ws/wsLookup?id=347207945&urlDesc="
+      X-Apple-Orig-Url:
+      - https://itunes.apple.com/lookup?id=347207945
+      X-Apple-Application-Site:
+      - ST11
+      Apple-Timing-App:
+      - 15 ms
+      Content-Type:
+      - text/javascript; charset=utf-8
+      X-Apple-Application-Instance:
+      - '2089677'
+      X-Webobjects-Loadaverage:
+      - '0'
+      Server:
+      - ATS/4.1.0
+      X-Apple-Ats-Cache-Key:
+      - "/17.173.38.166/80/lookup/browser/https?id=347207945"
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-transform, max-age=1
+      Date:
+      - Thu, 06 Nov 2014 03:02:37 GMT
+      Content-Length:
+      - '1898'
+      Connection:
+      - keep-alive
+      X-Apple-Partner:
+      - origin.0
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        CgoKewogInJlc3VsdENvdW50IjoxLAogInJlc3VsdHMiOiBbCnsid3JhcHBl
+        clR5cGUiOiJ0cmFjayIsICJraW5kIjoicG9kY2FzdCIsICJhcnRpc3RJZCI6
+        ODI1NzAxODk5LCAiY29sbGVjdGlvbklkIjozNDcyMDc5NDUsICJ0cmFja0lk
+        IjozNDcyMDc5NDUsICJhcnRpc3ROYW1lIjoiQ2hhcmxlcyBNYXggV29vZCIs
+        ICJjb2xsZWN0aW9uTmFtZSI6IlRlYWNoIE1lIFRvIENvZGUgwrsgU2NyZWVu
+        Y2FzdHMgKGlQaG9uZS9pUG9kKSIsICJ0cmFja05hbWUiOiJUZWFjaCBNZSBU
+        byBDb2RlIMK7IFNjcmVlbmNhc3RzIChpUGhvbmUvaVBvZCkiLCAiY29sbGVj
+        dGlvbkNlbnNvcmVkTmFtZSI6IlRlYWNoIE1lIFRvIENvZGUgwrsgU2NyZWVu
+        Y2FzdHMgKGlQaG9uZS9pUG9kKSIsICJ0cmFja0NlbnNvcmVkTmFtZSI6IlRl
+        YWNoIE1lIFRvIENvZGUgwrsgU2NyZWVuY2FzdHMgKGlQaG9uZS9pUG9kKSIs
+        ICJhcnRpc3RWaWV3VXJsIjoiaHR0cHM6Ly9pdHVuZXMuYXBwbGUuY29tL3Vz
+        L2FydGlzdC9kZXZjaGF0LnR2L2lkODI1NzAxODk5P210PTImdW89NCIsICJj
+        b2xsZWN0aW9uVmlld1VybCI6Imh0dHBzOi8vaXR1bmVzLmFwcGxlLmNvbS91
+        cy9wb2RjYXN0L3RlYWNoLW1lLXRvLWNvZGUtc2NyZWVuY2FzdHMvaWQzNDcy
+        MDc5NDU/bXQ9MiZ1bz00IiwgImZlZWRVcmwiOiJodHRwOi8vZmVlZHMuZmVl
+        ZHdyZW5jaC5jb20vVGVhY2hNZVRvQ29kZWlQaG9uZS5yc3MiLCAidHJhY2tW
+        aWV3VXJsIjoiaHR0cHM6Ly9pdHVuZXMuYXBwbGUuY29tL3VzL3BvZGNhc3Qv
+        dGVhY2gtbWUtdG8tY29kZS1zY3JlZW5jYXN0cy9pZDM0NzIwNzk0NT9tdD0y
+        JnVvPTQiLCAiYXJ0d29ya1VybDMwIjoiaHR0cDovL2EyLm16c3RhdGljLmNv
+        bS91cy9yMzAvUG9kY2FzdHMzL3Y0LzAzLzg5L2NiLzAzODljYjdjLTQ5ZDkt
+        NzljNy1lYmI4LWM2MTZhY2U5NDdmZS9temFfNTc1NjgzMTAyOTk1NTQxNzA5
+        My4zMHgzMC01MC5qcGciLCAiYXJ0d29ya1VybDYwIjoiaHR0cDovL2E0Lm16
+        c3RhdGljLmNvbS91cy9yMzAvUG9kY2FzdHMzL3Y0LzAzLzg5L2NiLzAzODlj
+        YjdjLTQ5ZDktNzljNy1lYmI4LWM2MTZhY2U5NDdmZS9temFfNTc1NjgzMTAy
+        OTk1NTQxNzA5My42MHg2MC01MC5qcGciLCAiYXJ0d29ya1VybDEwMCI6Imh0
+        dHA6Ly9hMi5tenN0YXRpYy5jb20vdXMvcjMwL1BvZGNhc3RzMy92NC8wMy84
+        OS9jYi8wMzg5Y2I3Yy00OWQ5LTc5YzctZWJiOC1jNjE2YWNlOTQ3ZmUvbXph
+        XzU3NTY4MzEwMjk5NTU0MTcwOTMuMTAweDEwMC03NS5qcGciLCAiY29sbGVj
+        dGlvblByaWNlIjowLjAwLCAidHJhY2tQcmljZSI6MC4wMCwgInRyYWNrUmVu
+        dGFsUHJpY2UiOjAsICJjb2xsZWN0aW9uSGRQcmljZSI6MCwgInRyYWNrSGRQ
+        cmljZSI6MCwgInRyYWNrSGRSZW50YWxQcmljZSI6MCwgInJlbGVhc2VEYXRl
+        IjoiMjAxMi0xMi0yMFQxNjoyODowMFoiLCAiY29sbGVjdGlvbkV4cGxpY2l0
+        bmVzcyI6Im5vdEV4cGxpY2l0IiwgInRyYWNrRXhwbGljaXRuZXNzIjoibm90
+        RXhwbGljaXQiLCAidHJhY2tDb3VudCI6NDcsICJjb3VudHJ5IjoiVVNBIiwg
+        ImN1cnJlbmN5IjoiVVNEIiwgInByaW1hcnlHZW5yZU5hbWUiOiJTb2Z0d2Fy
+        ZSBIb3ctVG8iLCAicmFkaW9TdGF0aW9uVXJsIjoiaHR0cHM6Ly9pdHVuZXMu
+        YXBwbGUuY29tL3N0YXRpb24vaWRyYS4zNDcyMDc5NDUiLCAiYXJ0d29ya1Vy
+        bDYwMCI6Imh0dHA6Ly9hNS5tenN0YXRpYy5jb20vdXMvcjMwL1BvZGNhc3Rz
+        My92NC8wMy84OS9jYi8wMzg5Y2I3Yy00OWQ5LTc5YzctZWJiOC1jNjE2YWNl
+        OTQ3ZmUvbXphXzU3NTY4MzEwMjk5NTU0MTcwOTMuNjAweDYwMC03NS5qcGci
+        LCAiZ2VucmVJZHMiOlsiMTQ4MCIsICIyNiIsICIxMzE4Il0sICJnZW5yZXMi
+        OlsiU29mdHdhcmUgSG93LVRvIiwgIlBvZGNhc3RzIiwgIlRlY2hub2xvZ3ki
+        XX1dCn0KCgo=
+    http_version: 
+  recorded_at: Thu, 06 Nov 2014 03:02:37 GMT
 recorded_with: VCR 2.9.3
