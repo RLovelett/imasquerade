@@ -16,10 +16,10 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Imasquerade::VERSION
 
-  gem.add_dependency             "curb"
-  gem.add_dependency             "nokogiri"
-  gem.add_dependency             "plist"
-  gem.add_dependency             "colorize"
-  gem.add_development_dependency "rake"
-  gem.add_development_dependency "shoulda"
+  gem.add_dependency 'httparty', '~> 0.13.0'
+  gem.add_dependency 'multi_json', '~> 1.10.0'
+  gem.add_development_dependency 'rake', '~> 10.3.0'
+  gem.add_development_dependency 'rspec', '~> 3.1.0'
+  gem.add_development_dependency 'vcr', '~> 2.9.0'
+  gem.add_development_dependency 'webmock', '~> 1.20.0'
 end

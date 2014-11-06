@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://itunes.apple.com/lookup?id=215517191
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Apple-Jingle-Correlation-Key:
+      - YACMCIYJE2WBW
+      X-Apple-Translated-Wo-Url:
+      - /WebObjects/MZStoreServices.woa/ws/wsLookup?id=215517191&urlDesc=
+      X-Apple-Orig-Url:
+      - https://itunes.apple.com/lookup?id=215517191
+      X-Apple-Application-Site:
+      - NWK
+      Apple-Timing-App:
+      - 14 ms
+      Content-Type:
+      - text/javascript; charset=utf-8
+      X-Apple-Application-Instance:
+      - '1075018'
+      X-Webobjects-Loadaverage:
+      - '0'
+      Server:
+      - ATS/4.1.0
+      X-Apple-Ats-Cache-Key:
+      - /17.154.42.217/80/lookup/browser/https?id=215517191
+      Cache-Control:
+      - no-transform, max-age=1
+      Date:
+      - Thu, 06 Nov 2014 02:14:02 GMT
+      Content-Length:
+      - '2084'
+      Connection:
+      - keep-alive
+      X-Apple-Partner:
+      - origin.0
+    body:
+      encoding: US-ASCII
+      string: ! "\n\n\n{\n \"resultCount\":1,\n \"results\": [\n{\"wrapperType\":\"track\",
+        \"kind\":\"podcast\", \"artistId\":256278813, \"collectionId\":215517191,
+        \"trackId\":215517191, \"artistName\":\"Lou Mongello - Disney Expert, Entrepreneur,
+        Host, Author and Speaker\", \"collectionName\":\"The WDW Radio Show - Your
+        Walt Disney World Information Station\", \"trackName\":\"The WDW Radio Show
+        - Your Walt Disney World Information Station\", \"collectionCensoredName\":\"The
+        WDW Radio Show - Your Walt Disney World Information Station\", \"trackCensoredName\":\"The
+        WDW Radio Show - Your Walt Disney World Information Station\", \"artistViewUrl\":\"https://itunes.apple.com/us/artist/travel-cast-network/id256278813?mt=2&uo=4\",
+        \"collectionViewUrl\":\"https://itunes.apple.com/us/podcast/wdw-radio-show-your-walt-disney/id215517191?mt=2&uo=4\",
+        \"feedUrl\":\"http://www.wdwradio.com/xml/wdwradio.xml\", \"trackViewUrl\":\"https://itunes.apple.com/us/podcast/wdw-radio-show-your-walt-disney/id215517191?mt=2&uo=4\",
+        \"artworkUrl30\":\"http://a5.mzstatic.com/us/r30/Podcasts6/v4/cf/f9/be/cff9be62-faa0-ff06-2418-e724936b57cf/mza_5079045456985578759.30x30-50.jpg\",
+        \"artworkUrl60\":\"http://a4.mzstatic.com/us/r30/Podcasts6/v4/cf/f9/be/cff9be62-faa0-ff06-2418-e724936b57cf/mza_5079045456985578759.60x60-50.jpg\",
+        \"artworkUrl100\":\"http://a2.mzstatic.com/us/r30/Podcasts6/v4/cf/f9/be/cff9be62-faa0-ff06-2418-e724936b57cf/mza_5079045456985578759.100x100-75.jpg\",
+        \"collectionPrice\":0.00, \"trackPrice\":0.00, \"trackRentalPrice\":0, \"collectionHdPrice\":0,
+        \"trackHdPrice\":0, \"trackHdRentalPrice\":0, \"releaseDate\":\"2014-10-30T22:05:00Z\",
+        \"collectionExplicitness\":\"cleaned\", \"trackExplicitness\":\"cleaned\",
+        \"trackCount\":301, \"country\":\"USA\", \"currency\":\"USD\", \"primaryGenreName\":\"Places
+        & Travel\", \"contentAdvisoryRating\":\"Clean\", \"radioStationUrl\":\"https://itunes.apple.com/station/idra.215517191\",
+        \"artworkUrl600\":\"http://a3.mzstatic.com/us/r30/Podcasts6/v4/cf/f9/be/cff9be62-faa0-ff06-2418-e724936b57cf/mza_5079045456985578759.600x600-75.jpg\",
+        \"genreIds\":[\"1320\", \"26\", \"1324\", \"1305\"], \"genres\":[\"Places
+        & Travel\", \"Podcasts\", \"Society & Culture\", \"Kids & Family\"]}]\n}\n\n\n"
+    http_version: 
+  recorded_at: Thu, 06 Nov 2014 02:14:02 GMT
+recorded_with: VCR 2.9.3
