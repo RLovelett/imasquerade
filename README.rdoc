@@ -8,16 +8,15 @@ source feed url and is subsequently returned.
 
 == Requirements
  
-* uri
-* curb => 0.7.10
-* nokogiri => 1.4.4
+* httparty
+* multi_json
 
-This project was built and tested against ruby 1.9.2p160 (2011-01-16 revision 30579) [x86_64-darwin10.6.0]
+This project was built and tested against ruby 1.9.3p392 (2013-02-22 revision 39386) [x86_64-darwin14.0.0]
  
 == Usage
 
- Imasquerade::Extractor.parse_itunes_uri("http://itunes.apple.com/us/podcast/the-f-u-sports-talk-podcast/id356478903")
- # returns "http://www.urannonline.com/Collection_Site/The_F_U_Sports_Talk_Podcast/rss.xml"
+ Imasquerade.parse_itunes_uri("https://itunes.apple.com/us/podcast/wdw-radio-show-your-walt-disney/id215517191?mt=2")
+ # returns "http://www.wdwradio.com/xml/wdwradio.xml"
  
 Technically, the parser can take the url in another format (e.g., id=356478903).
 However I do not believe Apple is using this format any longer. Regardless the
@@ -35,6 +34,6 @@ capability is there.
 
 == Copyright
 
-Copyright (c) 2011 Ryan Lovelett. See LICENSE.txt for
+Copyright (c) 2011-2014 Ryan Lovelett. See LICENSE.txt for
 further details.
 
