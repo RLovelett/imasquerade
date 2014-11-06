@@ -21,5 +21,4 @@ Gem::Specification.new do |gem|
   gem.add_dependency             "plist"
   gem.add_dependency             "colorize"
   gem.add_development_dependency "rake"
-  gem.add_development_dependency "shoulda"
 end
